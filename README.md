@@ -12,18 +12,18 @@ nous verrons la différence détaillée entre cette fonction avec leur syntaxe e
 
 initialisez le `NPM` à l'aide de la commande ci-dessous.Le fichier package.json sera créé.
 
-```
+```shell
   npm init -y
 ```
 Nous allons maintenant installer la dépendance nécessaire pour notre projet à l'aide des commandes suivant:
 ### `express` , `ejs` et `typescript`
-```
+```bash
   npm i express ejs typescript
 ```
 
 ### `@types`
 
-```
+```bash
   npm i --save-dev @types/express @types/ejs
 ```
 
@@ -39,7 +39,7 @@ Structure :
 ```
 
  `package.json` :
-```
+```json
   {
   "name": "ejsvssendfile",
   "version": "1.0.0",
@@ -63,7 +63,7 @@ initialiser typescript :
 ```
   tsc --init
 ```
-```
+```json
   {
   "compilerOptions": {
     "target": "es2022",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
@@ -81,7 +81,7 @@ initialiser typescript :
 ```
 
 `index.ejs` : 
-```
+```ejs
   <!-- views/index.ejs -->
 <!DOCTYPE html>
 <html lang=en>
@@ -112,7 +112,7 @@ Il restitue principalement les fichiers modèles spécifiés en les combinant av
 Syntaxe: ` res.render(view, [locals], callback) `
 
 Exemple : 
-```
+```javascript
 /// app.js (main)
 import express, { Application , Request , Response } from 'express'
 import path from 'path'
